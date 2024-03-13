@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #c10000;
+    --secondary-color: #003C3B;
+  }
+
+// color variables//
+$primary-color:#c10000;
+$secondary-color:#003C3B;
+$third-color: mix($primary-color, $secondary-color, 50%);
+$accent-color:#003C3B;
+$white-color:#FFFFFF;
+$black-color:black;
+$background-color:#FFFFFF;
+$background-white-lite:#F7F9FB;
+$table-header-color:#f2f2f2;
+
+// border color//
+$border-grey-color:#EAEAEA;
+$border-black-color:black;
+// font family variables //
+$font-family-primary:'Roboto Slab', serif;

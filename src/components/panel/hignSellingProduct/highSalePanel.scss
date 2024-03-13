@@ -1,0 +1,28 @@
+@import "../../../styles//variables";
+
+.high-sale{
+    padding: 1rem;
+    flex:3;
+    background-color: $background-color;
+     border-radius: 2rem;
+     font-size: 2rem;
+     color:$secondary-color;
+     overflow: scroll;
+     &-heading{
+        margin-bottom: 1.4rem;
+        font-size: 2.5rem;
+        font-weight: 900;
+        
+     }
+     &-row{
+        grid-template-columns:2fr 2fr 0.5fr;
+        display: grid;
+        color:rgba(0, 0, 0, 0.793);
+        grid-template-rows: 2rem;
+        text-transform: capitalize;
+    border-bottom: 0.3px solid black;
+    margin-bottom:0.8rem ;
+    padding-bottom: 1rem;
+    }
+
+   }

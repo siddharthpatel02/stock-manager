@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+@import "../../../styles/button";
+.product-form{
+    background-color: $background-color;
+    padding: 3.5rem;
+    border: 2px solid $border-grey-color;
+    &-button{
+        padding-top:2rem ;
+        display: flex;
+        justify-content:flex-end ;
+        gap: 2rem;
+        &__cancel{
+            width: 10rem;
+        }
+    }
+}

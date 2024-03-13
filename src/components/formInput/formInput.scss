@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+.input{
+    font-size: 2rem;
+    display: grid;
+  grid-template-columns: 1fr 3fr 0.8fr; // Adjust column widths as needed
+  border-bottom: 2px solid $border-grey-color;
+  padding: 2rem 0rem;
+  &:first-child{
+      border-top: 2px solid $border-grey-color;
+  }
+    &-label{
+        text-transform: capitalize;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    &-element{
+        border: 2px solid $border-grey-color;
+        width: 25rem;
+        border-radius: 0.5rem;
+        padding-left: 0.5rem;
+        text-transform: capitalize;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+     margin: 0;
+     }
+     &[type=number]{
+            -moz-appearance: textfield;
+        }
+
+    }
+    &-element:focus{
+        border: 2px solid $border-black-color;
+        outline: none;
+    }
+    &-error{
+        text-align: center;
+        font-size: 1.4rem;
+        color: red;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

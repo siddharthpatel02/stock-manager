@@ -1,0 +1,14 @@
+@import "../../../styles/variables";
+.stat-card{
+    height: 14rem;
+    background-color: $background-color;
+    width: 22%;
+    border-radius: 2.5rem;
+    padding: 3rem;
+    &-heading{
+        font-size: 2rem;
+    }
+    &-figure{
+        font-size: 3.5rem;
+    }
+}

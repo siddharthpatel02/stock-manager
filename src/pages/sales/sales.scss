@@ -1,0 +1,6 @@
+@import "../../styles/grid";
+.sales{
+    &-grid-col{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}

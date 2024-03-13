@@ -1,0 +1,21 @@
+@import "./mixing";
+
+//  .table-grid{
+//     background-color:$background-white-lite ;
+//     font-size: 1.8rem;
+//     display: grid;
+//     grid-template-rows: 7rem;
+//     grid-template-columns:0.5fr 1fr 1fr 0.8fr 1fr 1fr;
+//     place-content: center;
+//     text-transform: capitalize;
+//     border: 2.5px solid $border-grey-color;
+//     &-item{
+// margin: auto 2rem;
+//  }}
+
+ .table-grid{
+ @include table-grid-row-1;
+
+    &-item{
+margin: auto 2rem;
+ }}

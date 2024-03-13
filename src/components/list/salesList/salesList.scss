@@ -1,0 +1,14 @@
+@import "../../../styles/grid";
+.sales-list{
+    &-row{
+        grid-template-columns: 1.2fr 1.2fr 0.5fr 1.5fr 1fr;
+    }
+    &-fallback{
+       margin-top: 3rem;
+       font-size: 2rem;
+       text-align: center;;
+      
+
+    }
+
+}

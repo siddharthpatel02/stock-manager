@@ -1,0 +1,24 @@
+@import "./variables";
+.btn{
+    &-primary{
+        &-fill{
+            padding: 1.5rem;
+            background-color: $primary-color;
+            border-radius: 0.8rem;
+            color: $background-color;
+            font-size: 2rem;
+            border: 2px solid $primary-color;
+
+        }
+        &-outline{
+            padding: 1.5rem;
+            background-color: $white-color;
+            border-radius: 0.8rem;
+            font-size: 2rem;
+            color: $secondary-color;
+            border: 2px solid $border-grey-color;
+        //     padding-left: 3rem;
+        //     padding-right: 3rem;
+        }
+        }
+           }

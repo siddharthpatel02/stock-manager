@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+.grid-container{
+    background-color:$table-header-color ;
+    font-size: 2rem;
+    display: grid;
+    grid-template-rows: 8rem;
+    grid-template-columns:0.5fr 1fr 1fr 0.8fr 1fr 1fr;
+    place-content: center;
+    text-transform: capitalize;
+    &-item{
+margin: auto 2rem;
+// margin-bottom: 0;
+// &:not(:first-child){
+//     // margin-top: 0;
+// }
+    }
+}

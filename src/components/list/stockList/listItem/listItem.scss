@@ -1,0 +1,10 @@
+@import "../../../../styles/grid";
+
+.stock-list{
+    &-column{
+    grid-template-columns:0.5fr 1fr 0.8fr 0.7fr 0.8fr 0.6fr 0.8fr 0.6fr;
+
+    
+        }
+    
+}

@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+.app {
+    display: flex;
+    height: 100vh;
+  
+    &-sideNavbar {
+      width: 15%;
+    }
+  
+    &-content {
+        flex-grow: 1;
+      background-color: $background-white-lite;
+      padding: 3rem;
+      overflow: scroll;
+
+    }
+  }

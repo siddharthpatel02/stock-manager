@@ -1,0 +1,11 @@
+@import "../../styles/variables";
+.sidebar{
+ padding: 3rem;
+ border-right: 2px solid $border-grey-color;
+&-logo{
+        height: 10rem;
+    }
+&-menu{
+    margin-top: 3rem;
+}
+}

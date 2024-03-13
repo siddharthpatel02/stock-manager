@@ -1,0 +1,97 @@
+@import "../../../styles/variables";
+@import "../../../styles/button";
+@import "../../../styles/typography";
+// @keyframes formAnimate {
+//     0%{
+//         opacity: 0;
+
+//     }
+//     100%{
+//         opacity: 1;
+
+
+//     }
+// }
+.stock-form{
+    background-color: $background-color;
+    // animation: formAnimate 2s ease-in;
+    &-select{
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: $background-white-lite;
+        font-size: 2rem;
+        text-align: center;
+        cursor: pointer;
+   &-options{
+            padding: 2rem;
+            border: 2px solid $border-grey-color;  
+           }
+  }
+    &-main{
+        padding: 3rem;
+        // padding-bottom: 1.5rem;
+        font-size: 1.8rem;
+        &-input{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-top: 1rem;
+            &-element{
+                border: 2px solid $border-grey-color;
+                border-radius: 6px;
+                width: 25rem;
+                padding: 4px;
+                &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+     margin: 0;
+     }
+     &[type=number]{
+            -moz-appearance: textfield;
+        }
+                &:focus{
+                    border: 2px solid $border-black-color;
+                    outline: none;
+                }
+
+            }
+            &-label{
+                text-align: center;
+            }
+
+        }
+        &-buttons{
+            display: flex;
+            justify-content: center;
+            padding-top: 2.5rem;
+            &-btn{
+                font-size: 1.8rem;
+                padding: 1rem 2rem;
+                &:not(:last-child){
+                    margin-right: 5rem;
+                    background-color: $primary-color;
+                }
+            }
+        }
+        &-error{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 2rem;
+            transform: translateX(-11%);
+            text-align: start;
+
+            &-msg{
+                color: red;
+                font-size: 14px
+            }
+        }
+
+
+    }
+}
+.cancel-btn{
+    padding: 1rem 2.3rem;
+}
+

@@ -1,0 +1,10 @@
+@import "./variables";
+.primary-heading{
+    font-size:4rem ;
+    white-space: pre-line;
+color: $accent-color;
+text-transform: capitalize;
+}
+.capitalize{
+    text-transform: capitalize;
+}

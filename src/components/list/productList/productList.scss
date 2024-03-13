@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+@import "../../../styles/grid";
+@import "../../../styles/chip";
+
+
+
+
+.product-list{
+    background-color: $background-white-lite;
+    // padding: 3.5rem;
+    // border: 2px solid $border-grey-color;
+    &-column{
+              grid-template-columns:0.5fr 1fr 1fr 0.8fr 1fr 0.6fr;
+
+    }
+    &-fallback{
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    // &-loader{
+    //   display: flex;
+    //   justify-content: center;
+    //   margin-top: 2rem;
+    // }
+}
