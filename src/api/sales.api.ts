@@ -12,9 +12,9 @@ interface SalesResponseType {
   __v: number;
 }
 
-const fetchSalesData = async (token: string) => {
+const fetchSalesData = async (token: string, sortOrder: string) => {
   try {
-    const salesData = await http.get("sales?type=user", {
+    const salesData = await http.get(`sales?type=user&sort=${sortOrder}`, {
       headers: { Authorization: token },
     });
     return salesData.data.data;

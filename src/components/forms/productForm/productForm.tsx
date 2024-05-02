@@ -41,6 +41,7 @@ const ProductForm = ({
             cookies.jwt
           );
           toast.success("Product created successfully");
+          closeForm();
           reset();
           refetch();
         } catch (error: any) {

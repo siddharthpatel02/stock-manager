@@ -21,7 +21,7 @@ const StockList = () => {
         <div className="table-grid-item">action</div>
       </div>
       {isLoading ? (
-          <Loader />
+        <Loader />
       ) : isError ? (
         <div className="product-list-fallback">
           <p>Something went wrong !</p>
@@ -46,7 +46,12 @@ const StockList = () => {
         </div>
       ) : (
         products.map((item: productResponseType, index: number) => (
-          <ListItem key={item._id} stock={item} index={index} refetch={refetch}></ListItem>
+          <ListItem
+            key={item._id}
+            stock={item}
+            index={index}
+            refetch={refetch}
+          ></ListItem>
         ))
       )}
     </div>

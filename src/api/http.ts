@@ -1,5 +1,6 @@
 import axios from "axios";
-const baseURL = "http://localhost:8080/";
+// const baseURL = "http://localhost:80/";
+const baseURL = "http://3.26.30.11/";
 
 const http = axios.create({ baseURL });
 
@@ -24,7 +25,7 @@ const setupResponseInterceptor = (callback: () => void) => {
 //   },
 //   (error) => {
 //     const navigate = useNavigate();
-//     const queryClient = useQueryClient();
+//     const queryClient = useQueryClient();d
 //     if (error.response.status === 401) {
 //       queryClient.removeQueries();
 //       navigate("/login");

@@ -6,12 +6,23 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../loader/loader";
 import TryAgain from "../../apiError/try-again/tryAgain";
+import Filter from "../../dropDown/filter";
+import { useEffect, useState } from "react";
+import { DashboardType } from "../../../type/dashboard.type";
 
 const SalesList = () => {
   const [cookies] = useCookies();
   const queryClient = useQueryClient();
   const navigate = useNavigate();
-
+  const dateSortValues = ["Newest", "Oldest"];
+  const [sortByDate, setSortByDate] = useState(dateSortValues[0]);
+  const dashboard: DashboardType | undefined = queryClient.getQueryData([
+    "dashboard",
+  ]);
+  const productList = dashboard?.productList;
+  const [sortByProduct, setSortByProduct] = useState({
+    productName: "All Product",
+  });
   const {
     isLoading,
     data: sales,
@@ -20,8 +31,9 @@ const SalesList = () => {
   } = useQuery({
     queryKey: ["salesData"],
     queryFn: async () => {
+      const sort = sortByDate === "Newest" ? "dsc" : "asc";
       try {
-        const data = await fetchSalesData(cookies.jwt);
+        const data = await fetchSalesData(cookies.jwt, sort);
         return data;
       } catch (error: any) {
         console.log(error);
@@ -35,9 +47,32 @@ const SalesList = () => {
     },
     retry: 2,
   });
+  useEffect(() => {
+    console.log(sortByDate);
+    refetch();
+  }, [sortByDate]);
 
   return (
     <div className="sales-list">
+      <Filter
+        width="18rem"
+        initialValue={sortByDate}
+        options={dateSortValues}
+        onSelectOption={(option) => {
+          if (option !== sortByDate) {
+            setSortByDate(option);
+            console.log(option);
+          }
+        }}
+      />
+      {/* <Filter
+        width="24rem"
+        initialValue={sortByProduct.productName}
+        options={productList?.map((product) => product.productName) || []}
+        onSelectOption={(option) => {
+          setSortByProduct(productList?.);
+        }}
+      ></Filter> */}
       <div
         className="table-grid sales-list-row"
         style={{ backgroundColor: "#f2f2f2", border: "0" }}

@@ -2,6 +2,7 @@
 .sales-list{
     &-row{
         grid-template-columns: 1.2fr 1.2fr 0.5fr 1.5fr 1fr;
+        margin-top: 1rem;
     }
     &-fallback{
        margin-top: 3rem;

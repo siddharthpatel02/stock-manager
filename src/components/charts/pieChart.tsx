@@ -28,7 +28,14 @@ const PieChart = ({
       },
     ],
   };
-  return <Pie data={data} />;
+  const options = {
+    plugins: {
+      legend: {
+        display: false, // Hide legend
+      },
+    },
+  };
+  return <Pie data={data} options={options} />;
 };
 
 export default PieChart;

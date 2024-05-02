@@ -73,7 +73,10 @@ const Home = () => {
           <div className="home-charts">
             <div className="home-charts-pie">
               <PieChart
-                labels={data.productList}
+                labels={data.productList.map(
+                  (item: { productName: string; _id: string }) =>
+                    item.productName
+                )}
                 figures={data.salesPerProduct}
               />
             </div>

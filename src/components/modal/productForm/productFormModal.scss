@@ -1,0 +1,32 @@
+@import "../../../styles/variables";
+
+.modal-background{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(128, 128, 128, 0.5);;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.modal-container{
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);   
+    background-color: $background-color;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 2rem;
+    transform: translateY(-5%);
+    &-cls-btn{
+        align-self: flex-end;
+        font-size: large;
+        margin-bottom: 1rem;
+    }
+
+}

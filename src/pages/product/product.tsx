@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProductForm from "../../components/forms/productForm/productForm";
 import ProductList from "../../components/list/productList/productList";
+import ProductFormModal from "../../components/modal/productForm/productFormModal";
 import useProducts from "../../customeHooks/useProductHook";
 import "./product.scss";
 
@@ -23,8 +24,15 @@ const Product = () => {
         Add new product
       </button>
       {addProduct && (
-        <ProductForm refetch={refetch} closeForm={() => setAddProduct(false)} />
+        <ProductFormModal
+          refetch={refetch}
+          closeForm={() => setAddProduct(false)}
+        />
       )}
+
+      {/* {addProduct && (
+        <ProductForm refetch={refetch} closeForm={() => setAddProduct(false)} />
+      )} */}
     </div>
   );
 };
