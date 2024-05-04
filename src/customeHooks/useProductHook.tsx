@@ -1,12 +1,9 @@
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
 import { getProducts } from "../api/productApi";
 
 const useProducts = () => {
   const [cookies] = useCookies();
-  const navigate = useNavigate();
-  const queryClient = useQueryClient();
 
   const {
     isLoading,

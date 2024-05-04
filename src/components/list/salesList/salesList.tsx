@@ -8,7 +8,6 @@ import Loader from "../../loader/loader";
 import TryAgain from "../../apiError/try-again/tryAgain";
 import Filter from "../../dropDown/filter";
 import { useEffect, useState } from "react";
-import { DashboardType } from "../../../type/dashboard.type";
 
 const SalesList = () => {
   const [cookies] = useCookies();
@@ -16,13 +15,6 @@ const SalesList = () => {
   const navigate = useNavigate();
   const dateSortValues = ["Newest", "Oldest"];
   const [sortByDate, setSortByDate] = useState(dateSortValues[0]);
-  const dashboard: DashboardType | undefined = queryClient.getQueryData([
-    "dashboard",
-  ]);
-  const productList = dashboard?.productList;
-  const [sortByProduct, setSortByProduct] = useState({
-    productName: "All Product",
-  });
   const {
     isLoading,
     data: sales,

@@ -6,7 +6,6 @@ import { loginUser, loginType } from "../../api/loginApi";
 import { useCookies } from "react-cookie";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { QueryClient } from "@tanstack/react-query";
 
 const SignIn = () => {
   const [, setCookie] = useCookies(["jwt"]);
